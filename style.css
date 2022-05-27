@@ -9,38 +9,102 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+/* STILE APP */
 .container {
     height: 100vh;
     width: 100%;
     display: flex;
-    /* debug */
-    background-color: green;
 }
 
 #contact-bar {
     height: 100%;
-    width: calc(100% / 3);
-    /* debug */
-    background-color: blue;
+    width: 35%;
 }
 
 #chat {
     height: 100%;
-    width: calc((100% / 3) * 2);
-    /* debug */
-    background-color: red;
+    width: 65%;
 }
 
+/* STILE HEADER/FOOTER */
 #contact-bar header,
 #chat header,
 #chat footer {
-    height: 80px;
+    height: 50px;
     width: 100%;
-    /* debug */
-    background-color: blueviolet;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
 }
 
+#chat footer {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#chat footer input {
+    height: 75%;
+    width: 80%;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+#chat footer i {
+    color: #6b7376;
+}
+
+#chat header {
+    border-left: 1px solid #ccc;
+}
+
+.user {
+    height:100%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user .user-img { 
+    height: 70%;
+    margin: 0 5px;
+}
+
+.user .user-text {
+    margin-left: 10px;
+}
+
+.user .user-text .user-last-access {
+    font-size: 10px;
+    color: #b1b1b1;
+
+}
+
+.tools{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.tools .fas {
+    margin-right: 15px;
+    color: #b1b1b1;
+}
+
+/* STILE CHAT MAIN */
 #chat main {
-    height: calc(100% - (80px * 2));
+    height: calc(100% - (50px * 2));
     width: 100%;
+    background-image: url(https://roadracingcore.com/it/wp-content/uploads/2013/02/sfondo-grigio.jpg);
+    background-size: cover;
+}
+
+.user-message-bg {
+    background-color: #d5f9ba;
+}
+
+.contact-message-bg {
+    background-color: #fff;
 }
