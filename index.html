@@ -23,8 +23,9 @@
         <div id="contact-bar">
             <!-- HEADER BARRA LATERALE/PROFILO UTENTE -->
             <header>
+
                 <div class="user">
-                    <img class="user-img" src="img/avatar-icon-6.png" alt="user-img"></img>
+                    <img class="user-img" src="img/9R7qcYvf74sqdXzVGAUtCJ.jpg" alt="user-img"></img>
                     <div class="user-name">Obi-Wan Kenobi</div>
                 </div>
 
@@ -33,22 +34,55 @@
                     <i class="fas fa-comment-alt"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
+
             </header>
 
-            <main></main>
+            <!-- MAIN DELLA BARRA LATERALE ED ELENCO CONTATTI -->
+            <main>
+
+                <!-- NOTIFICHE -->
+                <div id="notifications">
+                        <div class="bell"><i class="fas fa-bell-slash"></i></div>
+                        <div>
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <p>Attiva notifiche desktop</p>
+                        </div>                       
+                </div>
+
+                <!-- BARRA DI RICERCA -->
+                <div id="search-bar">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+
+                <!-- LISTA CONTATTI -->
+                <ul id="contact-list">
+
+                    <li class="user" v-for="(contact, i) in contacts" :key="i">                        
+                        <img class="user-img" :src="contact.image" :alt="contact.name"></img>
+                        <div class="user-text">
+                            <div class="user-name">{{contact.name}}</div>
+                            <p>Ultimo messaggio</p>
+                        </div>                       
+                    </li>
+
+                </ul>
+            </main>
+
         </div>
 
         <!-- CHAT -->
         <div id="chat">
+
             <!-- HEADER DELLA CHAT -->
             <header>
+
                 <div class="user">
                     <img class="user-img" src="img/avatar-icon-6.png" alt="user-img"></img>
                     <div class="user-text">
                         <div class="user-name">Tizio</div>
-                        <p class="user-last-access">Ultimo accesso</p>
+                        <p>Ultimo accesso</p>
                     </div>
-                    
                 </div>
 
                 <div class="tools">
@@ -56,15 +90,24 @@
                     <i class="fas fa-paperclip"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
+
             </header>
-            <main></main>
+
+            <!-- MAIN DELLA CHAT -->
+            <main>
+            </main>
+
             <!-- FOOTER DELLA CHAT -->
             <footer>
+
                 <i class="far fa-smile"></i>
                 <input type="text" placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
+
             </footer>
+
         </div>
+
     </div>
 
     <!-- LINK A VUE.JS -->

@@ -30,7 +30,7 @@ body {
 #contact-bar header,
 #chat header,
 #chat footer {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background-color: #eaeaea;
     display: flex;
@@ -68,7 +68,9 @@ body {
 }
 
 .user .user-img { 
-    height: 70%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
     margin: 0 5px;
 }
 
@@ -76,10 +78,9 @@ body {
     margin-left: 10px;
 }
 
-.user .user-text .user-last-access {
+.user .user-text p {
     font-size: 10px;
     color: #b1b1b1;
-
 }
 
 .tools{
@@ -95,7 +96,7 @@ body {
 
 /* STILE CHAT MAIN */
 #chat main {
-    height: calc(100% - (50px * 2));
+    height: calc(100% - (60px * 2));
     width: 100%;
     background-image: url(https://roadracingcore.com/it/wp-content/uploads/2013/02/sfondo-grigio.jpg);
     background-size: cover;
@@ -108,3 +109,79 @@ body {
 .contact-message-bg {
     background-color: #fff;
 }
+/* STILE SEZIONE NOTIFICHE */
+#notifications {
+    height: 60px;
+    width: 100%;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#notifications .bell {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    color: #8edafc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+#notifications p {
+    font-size: 10px;
+    color: #666;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+/* STILE BARRA DI RICERCA CONTATTI*/
+#search-bar {
+    height: 45px;
+    width: 100%;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+}
+
+#search-bar .search-btn,
+#search-bar input {
+    height: 75%;
+    background-color: #fff;
+    border: 1px solid #ddd
+}
+
+#search-bar .search-btn {
+    width: 15%;
+    margin-left: 5px;
+    font-size: 15px;
+    color: #b1b1b1;
+}
+
+#search-bar input {
+    width: calc(100% - (15% + 10px));
+    margin-right: 5px;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+/* STILE LISTA CONTATTI */
+
+/* struttura <li> come .user header chat */
+
+#contact-list {
+    overflow: scroll;
+    max-height: calc(100vh - (60px + 60px + 45px));
+}
+
+#contact-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
