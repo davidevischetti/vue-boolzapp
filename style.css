@@ -1,5 +1,46 @@
+/* STILE GENERALE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* debug */
+    background-color: green;
+}
+
+#contact-bar {
+    height: 100%;
+    width: calc(100% / 3);
+    /* debug */
+    background-color: blue;
+}
+
+#chat {
+    height: 100%;
+    width: calc((100% / 3) * 2);
+    /* debug */
+    background-color: red;
+}
+
+#contact-bar header,
+#chat header,
+#chat footer {
+    height: 80px;
+    width: 100%;
+    /* debug */
+    background-color: blueviolet;
+}
+
+#chat main {
+    height: calc(100% - (80px * 2));
+    width: 100%;
 }
