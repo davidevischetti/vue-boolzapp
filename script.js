@@ -2,6 +2,9 @@ const myApp = new Vue ({
     el : '#vue-js-container',
 
     data : {
+        myTimeOut : '',
+
+        activeContact: 0,
 
         newAnswer : {
             day: '',
@@ -21,7 +24,7 @@ const myApp = new Vue ({
             {
                 name : 'Luke Skywalker',
                 image : 'https://www.cinemascomics.com/wp-content/uploads/2020/08/luke-star-wars-heroe-960x720.jpg?mrf-size=m',
-                active : true,
+                active : false,
                 messages : [
                     {
                         day: '20/03/2020',
@@ -404,27 +407,28 @@ const myApp = new Vue ({
             this.contacts.forEach(element => {
                 element.active = false;
             });
-
             newChat.active = true;
+            this.activeContact = newChat;
+            console.log(this.activeContact.name);
         },
 
-        addNewAnswer (answer) {
-            answer.messages.push(this.newAnswer);
+        addNewAnswer () {
+            this.activeContact.messages.push(this.newAnswer);
+        },
+
+        testFunc () {
+            console.log('wewe');
         },
 
         addNewMessage () {
-            this.contacts.forEach(element => {
-                now = new Date();
-                this.newMessage.hours = `${now.getHours()}:${now.getMinutes()}`;
-                this.newAnswer.hours = `${now.getHours()}:${now.getMinutes()}`;
-                if (element.active === true) {
-                    element.messages.push(this.newMessage);
-                    setTimeout(this.addNewAnswer(element), 5000);  
-                    console.log(this.newAnswer.text);              
-                };
+            now = new Date();
+            this.newMessage.hours = `${now.getHours()}:${now.getMinutes()}`;
+            this.newAnswer.hours = `${now.getHours()}:${now.getMinutes()}`;
+            
+            this.activeContact.messages.push(this.newMessage);
+            
+            this.myTimeOut = setTimeout(this.addNewAnswer, 1000); 
                 
-            });
-
             this.newMessage = {
                 day: '',
                 hours:'',
