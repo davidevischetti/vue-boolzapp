@@ -58,7 +58,7 @@
                 <!-- LISTA CONTATTI -->
                 <ul id="contact-list">
 
-                    <li class="user" v-for="(contact, i) in contacts" :key="i" @click="activeChat(contact)"   :class="contact.active === true ? 'bg-chat-grey' : ''">                        
+                    <li class="user" v-for="(contact, i) in contacts" :key="i" @click="activeChat(contact)" :class="contact.active === true ? 'bg-chat-grey' : ''">                        
                         <img class="user-img" :src="contact.image" :alt="contact.name"></img>
                         <div class="user-text">
                             <div class="user-name">{{contact.name}}</div>
@@ -99,12 +99,12 @@
             <!-- MAIN DELLA CHAT -->
             <main>
 
-                <div v-for="(contact, i) in contacts" :key="i">
+                <div v-for="(contact, id, i) in contacts" :key="i">
                     <div v-if="contact.active === true">
                         <div class="chat-flex" v-for="(message, j) in contact.messages" :key="j">
                             <div class="chat-message" :class="message.status === 'sent' ? 'user-message-bg' : 'contact-message-bg'">
                                 {{message.text}}
-                                <div class="chat-time"></div>
+                                <div class="chat-time">{{message.hours}}</div>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
             <footer>
 
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" contact in contacts v-model="newMessage.text" @keyup.enter="addNewMessage" placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
 
             </footer>

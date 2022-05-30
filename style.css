@@ -219,4 +219,13 @@ body {
     border-radius: 7px;
     font-size: 12px;
     font-weight: 600;
+    position: relative;
+}
+
+.chat-message .chat-time {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    font-size: 8px;
+    color: #aaa;
 }

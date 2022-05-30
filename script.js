@@ -2,6 +2,13 @@ const myApp = new Vue ({
     el : '#vue-js-container',
 
     data : {
+        newMessage :{
+            day: '',
+            hours:'',
+            text: '',
+            status: 'sent'
+        },
+
         contacts : [
             {
                 name : 'Luke Skywalker',
@@ -9,85 +16,98 @@ const myApp = new Vue ({
                 active : true,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
             },
-            {
+            {      
                 name : 'Anakin Skywalker',
                 image : 'https://lamenteemeravigliosa.it/wp-content/uploads/2018/07/giovane-anakin-skywalker.jpg',
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
             },
-            {
+            {               
                 name : 'Qui-Gon Jinn',
                 image : 'https://www.ciakmagazine.it/wp-content/uploads/2022/04/liam-neeson-obi-quan-qui-gon-jinn.webp',
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
+
                 ]
             },
             {
@@ -96,24 +116,28 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -125,13 +149,15 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -143,35 +169,41 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -183,13 +215,15 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -201,24 +235,28 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -230,13 +268,15 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -248,24 +288,28 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -277,46 +321,67 @@ const myApp = new Vue ({
                 active : false,
                 messages : [
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:00',
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        day: '20/03/2020',
+                        hours:' 16:30',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        day: '20/03/2020',
+                        hours:' 16:30',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        day: '20/03/2020',
+                        hours:' 16:30',
                         text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
@@ -326,6 +391,7 @@ const myApp = new Vue ({
     },
 
     methods : {
+
         activeChat (newChat) {
             this.contacts.forEach(element => {
                 element.active = false;
@@ -333,7 +399,10 @@ const myApp = new Vue ({
             });
 
             newChat.active = true;
+        },
 
+        addNewMessage () {
+            this.messages.push(this.newMessage);
         }
     }
 
