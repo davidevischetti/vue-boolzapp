@@ -99,7 +99,7 @@
             <!-- MAIN DELLA CHAT -->
             <main>
 
-                <div v-for="(contact, id, i) in contacts" :key="i">
+                <div v-for="(contact, i) in contacts" :key="i">
                     <div v-if="contact.active === true">
                         <div class="chat-flex" v-for="(message, j) in contact.messages" :key="j">
                             <div class="chat-message" :class="message.status === 'sent' ? 'user-message-bg' : 'contact-message-bg'">
@@ -116,7 +116,7 @@
             <footer>
 
                 <i class="far fa-smile"></i>
-                <input type="text" contact in contacts v-model="newMessage.text" @keyup.enter="addNewMessage" placeholder="Scrivi un messaggio">
+                <input type="text"  @keyup.enter="addNewMessage" v-model="newMessage.text" placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
 
             </footer>

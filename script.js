@@ -2,6 +2,14 @@ const myApp = new Vue ({
     el : '#vue-js-container',
 
     data : {
+
+        newAnswer : {
+            day: '',
+            hours:'',
+            text: 'ok',
+            status: 'received'
+        },
+
         newMessage :{
             day: '',
             hours:'',
@@ -395,17 +403,36 @@ const myApp = new Vue ({
         activeChat (newChat) {
             this.contacts.forEach(element => {
                 element.active = false;
-                console.log(element.active);
             });
 
             newChat.active = true;
         },
 
-        addNewMessage () {
-            this.messages.push(this.newMessage);
-        }
-    }
+        addNewAnswer (answer) {
+            answer.messages.push(this.newAnswer);
+        },
 
+        addNewMessage () {
+            this.contacts.forEach(element => {
+                now = new Date();
+                this.newMessage.hours = `${now.getHours()}:${now.getMinutes()}`;
+                this.newAnswer.hours = `${now.getHours()}:${now.getMinutes()}`;
+                if (element.active === true) {
+                    element.messages.push(this.newMessage);
+                    setTimeout(this.addNewAnswer(element), 5000);  
+                    console.log(this.newAnswer.text);              
+                };
+                
+            });
+
+            this.newMessage = {
+                day: '',
+                hours:'',
+                text: '',
+                status: 'sent'
+            }  
+        },
+    },
 });
 
 
