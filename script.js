@@ -333,6 +333,7 @@ const myApp = new Vue ({
             });
 
             newChat.active = true;
+
         }
     }
 

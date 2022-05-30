@@ -58,7 +58,7 @@
                 <!-- LISTA CONTATTI -->
                 <ul id="contact-list">
 
-                    <li class="user" v-for="(contact, i) in contacts" :key="i" @click="activeChat(contact)">                        
+                    <li class="user" v-for="(contact, i) in contacts" :key="i" @click="activeChat(contact)"   :class="contact.active === true ? 'bg-chat-grey' : ''">                        
                         <img class="user-img" :src="contact.image" :alt="contact.name"></img>
                         <div class="user-text">
                             <div class="user-name">{{contact.name}}</div>
@@ -78,11 +78,13 @@
             <!-- HEADER DELLA CHAT -->
             <header>
 
-                <div class="user">
-                    <img class="user-img" src="img/avatar-icon-6.png" alt="user-img"></img>
-                    <div class="user-text">
-                        <div class="user-name">Tizio</div>
-                        <p>Ultimo accesso</p>
+                <div class="absolute" v-for="(contact, i) in contacts" :key="i">
+                    <div class="user" v-if="contact.active === true">
+                        <img class="user-img" :src="contact.image" alt="contact.name"></img>
+                        <div class="user-text">
+                            <div class="user-name">{{contact.name}}</div>
+                            <p>Ultimo accesso</p>
+                        </div>
                     </div>
                 </div>
 
