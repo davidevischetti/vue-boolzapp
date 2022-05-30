@@ -94,21 +94,6 @@ body {
     color: #b1b1b1;
 }
 
-/* STILE CHAT MAIN */
-#chat main {
-    height: calc(100% - (60px * 2));
-    width: 100%;
-    background-image: url(https://roadracingcore.com/it/wp-content/uploads/2013/02/sfondo-grigio.jpg);
-    background-size: cover;
-}
-
-.user-message-bg {
-    background-color: #d5f9ba;
-}
-
-.contact-message-bg {
-    background-color: #fff;
-}
 /* STILE SEZIONE NOTIFICHE */
 #notifications {
     height: 60px;
@@ -176,7 +161,7 @@ body {
 /* struttura <li> come .user header chat */
 
 #contact-list {
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: calc(100vh - (60px + 60px + 45px));
 }
 
@@ -185,3 +170,36 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+/* STILE CHAT MAIN */
+#chat main {
+    height: calc(100% - (60px * 2));
+    width: 100%;
+    background-image: url(https://roadracingcore.com/it/wp-content/uploads/2013/02/sfondo-grigio.jpg);
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+.user-message-bg {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.contact-message-bg {
+    background-color: #fff;
+}
+
+.chat-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.chat-flex .chat-message {
+    margin: 10px 80px;
+    padding: 15px;
+    width: 250px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+
+}

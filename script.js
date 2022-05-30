@@ -6,17 +6,17 @@ const myApp = new Vue ({
             {
                 name : 'Luke Skywalker',
                 image : 'https://www.cinemascomics.com/wp-content/uploads/2020/08/luke-star-wars-heroe-960x720.jpg?mrf-size=m',
-                active : false,
+                active : true,
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -28,13 +28,24 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -46,13 +57,35 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -64,13 +97,24 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -82,13 +126,13 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -100,13 +144,35 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -118,13 +184,13 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -136,13 +202,24 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -154,13 +231,13 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -172,13 +249,24 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
@@ -190,17 +278,67 @@ const myApp = new Vue ({
                 messages : [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
 
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Tu tutto bene?',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Ciao come stai?',
+                        status: 'sent'
+
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Tu tutto bene?',
                         status: 'received'
                     }
                 ]
             },
-        ]
+        ],
+    },
+
+    methods : {
+        activeChat (newChat) {
+            this.contacts.forEach(element => {
+                element.active = false;
+                console.log(element.active);
+            });
+
+            newChat.active = true;
+        }
     }
+
 });
+
+
+
+
+
