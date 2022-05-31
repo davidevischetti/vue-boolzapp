@@ -179,6 +179,8 @@ body {
 #contact-list {
     overflow-y: scroll;
     max-height: calc(90vh - (60px + 60px + 45px));
+    min-height: calc(90vh - (60px + 60px + 45px));
+    background-color: #fff;
 }
 
 #contact-list .user {
