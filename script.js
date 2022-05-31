@@ -2,6 +2,8 @@ const myApp = new Vue ({
     el : '#vue-js-container',
 
     data : {
+        keyWord : '',
+        
         myTimeOut : '',
 
         activeContact: 0,
@@ -409,15 +411,6 @@ const myApp = new Vue ({
             });
             newChat.active = true;
             this.activeContact = newChat;
-            console.log(this.activeContact.name);
-        },
-
-        addNewAnswer () {
-            this.activeContact.messages.push(this.newAnswer);
-        },
-
-        testFunc () {
-            console.log('wewe');
         },
 
         addNewMessage () {
@@ -436,6 +429,24 @@ const myApp = new Vue ({
                 status: 'sent'
             }  
         },
+
+        addNewAnswer () {
+            this.activeContact.messages.push(this.newAnswer);
+        },
+
+        searchContact () {
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(this.keyWord)) {
+                    element.show = true;
+                    console.log(element.show);
+                    console.log(element.name);
+                } else {
+                    element.show = false;
+                    console.log(element.show);
+                    console.log('nada');
+                };
+            });           
+        }
     },
 });
 
