@@ -51,7 +51,7 @@
 
                 <!-- BARRA DI RICERCA -->
                 <div id="search-bar">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <button class="search-btn" @click="searchContact"><i class="fas fa-search"></i></button>
                     <input type="text" v-model="keyWord" @keyup="searchContact" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
@@ -59,10 +59,10 @@
                 <ul id="contact-list">
 
                     <li class="user" v-for="(contact, i) in contacts" :key="i" @click="activeChat(contact)" :class="[contact.active === true ? 'bg-chat-grey' : '', contact.show === false ? 'display-none' : '']">                        
-                        <img class="user-img" :src="contact.image" :alt="contact.name"></img>
+                        <img class="user-img" :src="contact.image" :alt="contact.name">
                         <div class="user-text">
                             <div class="user-name">{{contact.name}}</div>
-                            <p>Ultimo messaggio</p>
+                            <p></p>
                         </div>                       
                     </li>
 
@@ -79,11 +79,10 @@
             <header>
 
                     <div class="user" v-if="activeContact.active === true">
-                        
-                        <img class="user-img" :src="activeContact.image" alt="activeContact.name"></img>
+                        <img class="user-img" :src="activeContact.image" alt="activeContact.name">
                         <div class="user-text">
                             <div class="user-name">{{activeContact.name}}</div>
-                            <p>Ultimo accesso</p>
+                            <p>Ultimo accesso il {{activeContact.messages[lastMessage].day}} alle {{activeContact.messages[lastMessage].hours}}</p>
                         </div>
                     </div>
 
