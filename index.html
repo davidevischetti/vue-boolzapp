@@ -78,15 +78,17 @@
             <!-- HEADER DELLA CHAT -->
             <header>
 
-                <div class="absolute" v-for="(contact, i) in contacts" :key="i">
-                    <div class="user" v-if="contact.active === true">
-                        <img class="user-img" :src="contact.image" alt="contact.name"></img>
+                    <div class="user" v-if="activeContact.active === true">
+                        
+                        <img class="user-img" :src="activeContact.image" alt="activeContact.name"></img>
                         <div class="user-text">
-                            <div class="user-name">{{contact.name}}</div>
+                            <div class="user-name">{{activeContact.name}}</div>
                             <p>Ultimo accesso</p>
                         </div>
                     </div>
-                </div>
+
+                    <!-- PLACEHOLDER PER USER-->
+                    <div></div>
 
                 <div class="tools">
                     <i class="fas fa-search"></i>

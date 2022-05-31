@@ -6,6 +6,8 @@ const myApp = new Vue ({
         
         myTimeOut : '',
 
+        removedContact : 0,
+
         activeContact: 0,
 
         newAnswer : {
@@ -406,6 +408,12 @@ const myApp = new Vue ({
     methods : {
 
         activeChat (newChat) {
+            this.newMessage = {
+                day: '',
+                hours:'',
+                text: '',
+                status: 'sent'
+            }  
             this.contacts.forEach(element => {
                 element.active = false;
             });
@@ -418,10 +426,11 @@ const myApp = new Vue ({
             this.newMessage.hours = `${now.getHours()}:${now.getMinutes()}`;
             this.newAnswer.hours = `${now.getHours()}:${now.getMinutes()}`;
             
-            this.activeContact.messages.push(this.newMessage);
-            
-            this.myTimeOut = setTimeout(this.addNewAnswer, 1000); 
-                
+            if (this.newMessage.text !== '') {
+                this.activeContact.messages.push(this.newMessage);
+                this.myTimeOut = setTimeout(this.addNewAnswer, 1000);
+            };
+                  
             this.newMessage = {
                 day: '',
                 hours:'',
@@ -448,6 +457,7 @@ const myApp = new Vue ({
             });           
         }
     },
+
 });
 
 

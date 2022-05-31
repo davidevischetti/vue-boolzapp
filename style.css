@@ -39,13 +39,11 @@ body {
     display: flex;
 }
 
-#contact-bar header {
+#contact-bar header,
+#chat header {
     justify-content: space-between;
 }
 
-#chat header {
-    justify-content: flex-end;
-}
 
 #chat footer {
     justify-content: space-evenly;
@@ -67,12 +65,6 @@ body {
 
 #chat header {
     border-left: 1px solid #ccc;
-}
-
-#chat .absolute {
-    position: absolute;
-    left: 0;
-    top: 5px;
 }
 
 .user {
@@ -183,13 +175,13 @@ body {
     background-color: #fff;
 }
 
-#contact-list .user {
+#contact-list li {
     background-color: #fff;
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
 
-#contact-list .user.bg-chat-grey {
+#contact-list .bg-chat-grey {
     background-color: #eee;
 }
 
@@ -220,11 +212,13 @@ body {
 .chat-flex .chat-message {
     margin: 10px 80px;
     padding: 15px;
-    width: 250px;
+    width: fit-content;
+    max-width: 600px;
     border-radius: 7px;
     font-size: 12px;
     font-weight: 600;
     position: relative;
+    word-wrap: break-word;
 }
 
 .chat-message .chat-time {
