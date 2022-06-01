@@ -100,16 +100,12 @@
             <!-- MAIN DELLA CHAT -->
             <main>
 
-                <div v-for="(contact, i) in contacts" :key="i">
-                    <div v-if="contact.active === true">
-                        <div class="chat-flex" v-for="(message, j) in contact.messages" :key="j">
-                            <div class="chat-message" @click="displayBlock(message)" @mouseleave="displayNone(message)" :class="[message.status === 'sent' ? 'user-message-bg' : 'contact-message-bg', message.hide ? 'display-none' : '']">
-                                {{message.text}}
-                                <div class="chat-time">{{message.hours}}</div>
-                                <div class="message-remove" @click="removeMessage(message)" :class="message.display ? '' : 'display-none'">Elimina</div>
-                            </div>               
-                        </div>
-                    </div>
+                <div class="chat-flex" v-for="(message, i) in activeContact.messages" :key="i">
+                    <div class="chat-message" @click="displayBlock(message)" @mouseleave="displayNone(message)" :class="[message.status === 'sent' ? 'user-message-bg' : 'contact-message-bg', message.hide ? 'display-none' : '']">
+                        {{message.text}}
+                        <div class="chat-time">{{message.hours}}</div>
+                        <div class="message-remove" @click="removeMessage(message)" :class="message.display ? '' : 'display-none'">Elimina</div>
+                    </div>               
                 </div>
 
             </main>
